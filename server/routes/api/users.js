@@ -2,7 +2,7 @@ const express = require('express');
 const asyncHandler = require('express-async-handler');
 
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
-const { User } = require('../../db/models');
+const { User, Task } = require('../../db/models');
 const router = express.Router();
 const { check } = require('express-validator');
 const { handleValidationErrors } = require('../../utils/validation');
@@ -26,6 +26,23 @@ const validateSignup = [
     .withMessage('Password must be 6 characters or more.'),
   handleValidationErrors
 ];
+
+// Find all tasks under a specific user
+router.get(
+  '/:id/tasks',
+  requireAuth,
+  asyncHandler(async (req, res) => {
+    const userId = req.params.id;
+
+    const todos = await Task.findAll({
+      where: {
+        userId: `${userId}`
+      }
+    });
+
+    return res.json(todos);
+  })
+);
 
 // Sign up
 router.post(
