@@ -4,3 +4,10 @@ body, body * {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  width: fit-content;
+}

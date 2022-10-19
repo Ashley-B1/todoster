@@ -7,7 +7,6 @@ interface TodoState {
   isFetching: boolean;
   singleTodo?: Todo | null;
   entries: Todo | Object;
-  newState: Object;
   errors: any;
 }
 
@@ -16,7 +15,6 @@ const initialState: TodoState = {
   singleTodo: null,
   isFetching: false,
   errors: null,
-  newState: {},
   entries: {},
 };
 
@@ -92,6 +90,9 @@ export const todoSlice = createSlice({
     setOneTodo: (state, action: PayloadAction<Todo>) => {
       state.singleTodo = action.payload
     },
+    renewTodo: (state, action: PayloadAction<Todo>) => {
+      state.entries = action.payload
+    },
     newTodo: (state, action: PayloadAction<Todo>) => {
       state.entries = action.payload
     },
@@ -144,8 +145,19 @@ export const todoSlice = createSlice({
       state.isFetching = false;
       state.entries = action.payload;
     });
+    builder.addCase(updateTodo('todoId').pending, (state) => {
+      state.isFetching = true;
+    });
+    builder.addCase(updateTodo('todoId').rejected, (state, action) => {
+      state.isFetching = false;
+      state.errors = action.payload;
+    });
+    builder.addCase(updateTodo('todoId').fulfilled, (state, action) => {
+      state.isFetching = false;
+      state.entries = action.payload;
+    });
   }
 });
 
 export default todoSlice.reducer;
-export const { setOneTodo, setTodos, newTodo, removeTodo } = todoSlice.actions;
+export const { setOneTodo, setTodos, newTodo, removeTodo, renewTodo } = todoSlice.actions;
