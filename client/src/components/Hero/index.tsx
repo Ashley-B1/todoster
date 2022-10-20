@@ -6,9 +6,7 @@ const HeroPage = () => {
     <div className="home_page">
       <section className="home_page-intro">
         <header>
-          <h1>
-            Todoster
-          </h1>
+          <h1>Todoster</h1>
           <span>Do whatchu gotta do.</span>
         </header>
         <h4>
@@ -18,11 +16,15 @@ const HeroPage = () => {
       </section>
       <div className="home_page-btns">
         <button className="login_btn btn">
-          <Link to='/login' className="link">
+          <Link to="/login" className="link">
             Log In
           </Link>
         </button>
-        <button className="register_btn btn">Sign Up</button>
+        <button className="register_btn btn">
+          <Link to="/register" className="link">
+            Sign Up
+          </Link>
+        </button>
       </div>
     </div>
   );

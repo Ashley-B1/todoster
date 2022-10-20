@@ -1,15 +1,18 @@
-.login_page {
+.form-page {
   height: 100vh;
   display: Flex
 }
 
-.login_form-sect {
+.form-sect {
   flex: 3;
-  background-color: #DAD2C4;
   padding: .5rem 1.5rem;
 }
 
-.login_form {
+.login_form-sect {
+  background-color: #DAD2C4;
+}
+
+.form {
   width: 100%;
   height: 70%;
   display: flex;
@@ -19,31 +22,31 @@
   margin-top: 2.6rem
 }
 
-.login_form  * {
+.form  * {
   width: 85%;
 }
 
-.login_form h3 {
+.form h3 {
   font-weight: 500;
   font-size: 2.1rem;
   padding: 0 .5rem;
   color: rgb(26, 25, 25)
 }
 
-.login_form-actions {
+.form_actions {
   margin-top: 1.5rem;
   height: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: .5rem
+  padding: .5rem;
 }
 
-.login_form-actions * {
+.form_actions * {
   width: 100%;
 }
 
-.login_form-inputs {
+.form_inputs {
   padding: .5rem;
   display: flex;
   flex-direction: column;
@@ -51,7 +54,7 @@
   height: 40%;
 }
 
-.login_form-inputs input {
+.form_inputs input {
   padding: .5rem 1.5rem;
   background-color: transparent;
   border: .5px solid rgb(143, 140, 140);
@@ -59,12 +62,15 @@
   font-size: 1.2rem;
 }
 
-.login-page_btn {
+.form-btn {
   margin-top: 1.2rem;
 }
 
-.login_bg {
+.form_bg {
   flex: 4;
+}
+
+.login_bg {
   background: url(./assets/login_bg.webp) no-repeat center;
   background-size: cover;
 }
