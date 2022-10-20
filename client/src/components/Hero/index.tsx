@@ -17,12 +17,12 @@ const HeroPage = () => {
         </h4>
       </section>
       <div className="home_page-btns">
-        <button className="login_btn">
+        <button className="login_btn btn">
           <Link to='/login' className="link">
             Log In
           </Link>
         </button>
-        <button className="register_btn">Sign Up</button>
+        <button className="register_btn btn">Sign Up</button>
       </div>
     </div>
   );
