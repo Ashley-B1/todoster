@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "./LoginPage.css";
 
 const LoginPage = () => {
@@ -22,7 +22,11 @@ const LoginPage = () => {
                 placeholder="Enter your password..."
               />
             </div>
-            <button className="login-page_btn form-btn login_btn btn">Log In</button>
+            <Link to="/users/tasks" className="link">
+              <button className="login-page_btn form-btn login_btn btn">
+                Log In
+              </button>
+            </Link>
           </section>
         </form>
       </section>

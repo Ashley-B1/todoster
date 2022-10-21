@@ -10,8 +10,7 @@ const HeroPage = () => {
           <span>Do whatchu gotta do.</span>
         </header>
         <h4>
-          We're here to help you get organized at Todoster. We are the BEST
-          to-do app in all the land, just try us out!!
+          We're here to help you get organized! Sign up today for <span>FREE</span>!
         </h4>
       </section>
       <div className="home_page-btns">

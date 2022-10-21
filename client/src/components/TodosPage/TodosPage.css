@@ -1,0 +1,75 @@
+.todos_page {
+  height: 100vh;
+  width: 100vw;
+  padding: .5rem 1.5rem
+}
+
+.add_todos_input {
+  padding: .5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#todo_input {
+  width: 85vw;
+  border-radius: 10px;
+  border: .5px solid rgb(143, 140, 140);
+  padding: 0 .5rem;
+  font-size: 1.2rem;
+  outline: none
+}
+
+#add_todo-btn {
+  background-color: #D2EF64;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 8vw;
+  color: #000;
+}
+
+#todos_lists {
+  margin-top: 1.7rem;
+  padding: 0 .5rem;
+}
+
+.tl-header {
+  width: fit-content;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.tl-list {
+  margin-top: 1rem;
+  list-style: none;
+}
+
+.tl-li {
+  margin-bottom: .5rem;
+  border-radius: 10px;
+  padding: .5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+
+.complete_li {
+  background: #adc361;
+  color: #28461b;
+}
+
+.incomplete_li {
+  background-color: #c99190;
+  color: #5c0a08;
+}
+
+.tl-icons {
+  width: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tl-icons * {
+  cursor: pointer;
+}

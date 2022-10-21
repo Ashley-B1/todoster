@@ -1,9 +1,9 @@
-import React from 'react';
-import './RegisterPage.css';
+import { Link } from "react-router-dom";
+import "./RegisterPage.css";
 
 const RegisterPage = () => {
   return (
-    <div className='register_page form-page'>
+    <div className="register_page form-page">
       <section className="register_form-sect form-sect">
         <form className="register_form form">
           <h3>Welcome to Todoster!</h3>
@@ -22,13 +22,17 @@ const RegisterPage = () => {
                 placeholder="Enter your password..."
               />
             </div>
-            <button className="register-page_btn form-btn register_btn btn">Register</button>
+            <Link to="/users/tasks" className="link">
+              <button className="register-page_btn form-btn register_btn btn">
+                Register
+              </button>
+            </Link>
           </section>
         </form>
       </section>
       <section className="register_bg form_bg"></section>
     </div>
-  )
-}
+  );
+};
 
-export default RegisterPage
+export default RegisterPage;
